@@ -47,8 +47,7 @@ def add_margin_to_pdf(input_path, output_path, margin_inches=-1):
         )
         new_page.show_pdf_page(rect, pdf_document, page_number)
 
-    # 保存新的PDF文件，并使用压缩选项
-    new_pdf_document.save(output_path, garbage=4, deflate=True, clean=True)
+    new_pdf_document.save(output_path)
     new_pdf_document.close()
     pdf_document.close()
 
